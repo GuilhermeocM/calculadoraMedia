@@ -3,7 +3,7 @@ const imgAprovado = '<img src="./images/aprovado.png" alt="Emoji festejando" >'
 const imgReprovado = '<img src="./images/reprovado.png" alt="Emoji decepionado" >'
 const spanAprovado = '<span class="resultado aprovado">Aprovado</span>'
 const spanReprovado = '<span class="resultado reprovado">Reprovado</span>'
-const notaMinima = parseFloat(prompt('Digite a nota mínima gordo safado:'))
+const notaMinima = parseFloat(prompt('Digite a nota mínima:'))
 const atividades = []
 const notas = []
 let linhas = ''
@@ -47,7 +47,7 @@ function atualizaTabela(){
 function atualizaMediaFinal(){
     const mediaFinal = calculaMediaFinal()
 
-    document.getElementById('mediaFinalvalor').innerHTML = mediaFinal
+    document.getElementById('mediaFinalvalor').innerHTML = mediaFinal.toFixed(1)
     document.getElementById('mediaFinalResultado').innerHTML = mediaFinal >= 7 ? spanAprovado : spanReprovado
 }
 
